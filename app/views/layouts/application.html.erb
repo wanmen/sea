@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "万门大学" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -12,8 +12,40 @@
   </head>
 
   <body>
+    <div class="contain-to-grid fixed">
+        <nav class="top-bar" data-topbar>
+            <section class="top-bar-section">
+                <!-- Right Nav Section -->
+                <ul class="right">
+                    <li><a href="/courses">课程列表</a></li>
+                </ul>
+
+                <!-- Left Nav Section -->
+                <ul class="left">
+                    <li><a href="/">万门大学</a></li>
+                </ul>
+            </section>
+        </nav>
+    </div>
 
     <%= yield %>
+
+    <div class="footer">
+        <div class="row">
+            <div class="medium-4 medium-4 push-8 columns">
+            </div>
+            <div class="medium-8 medium-8 pull-4 columns">
+                <ul class="zurb-links">
+                    <li><a href="http://zurb.com/about">About</a></li>
+                    <li><a href="http://zurb.com/blog">Blog</a></li>
+                    <li><a href="http://zurb.com/news">News<span class="show-for-medium-up"> &amp; Events</span></a></li>
+                    <li><a href="http://zurb.com/contact">Contact</a></li>
+                    <li><a href="http://zurb.com/sitemap">Sitemap</a></li>
+                </ul>
+                <p class="copyright">© 1998–2013 ZURB, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

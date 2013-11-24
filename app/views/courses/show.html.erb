@@ -1,0 +1,61 @@
+<% if notice %>
+<div class="row">
+    <div data-alert class="alert-box info">
+      <!-- Your content goes here -->
+      <p id="notice">
+        <%= notice %>
+        <a href="#" class="close">&times;</a>
+      </p>
+    </div>
+</div>
+<% end %>
+
+<div>
+    <div class="row" style="margin-top: 20px; margin-bottom: 20px;">
+        <div class="columns">
+            <h2><%= @course.title %></h2>
+        </div>
+    </div>
+</div>
+
+<div class="course-content" style="background: #efefef;">
+    <div class="row" style="padding-top: 30px;">
+        <div class="large-9 columns">
+            <div class="course-video">
+                <div class="flex-video">
+                    <iframe width="420" height="315" src="<%= @video.url %>" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="large-3 columns" style="background: white;">
+            <div class="course-outline" style="padding-top: 15px;">
+                <ul class="no-bullet">
+                    <% @course.lessons.each do |lesson| %>
+                        <li>
+                            <div class="clearfix">
+                                <a href="?l=<%= lesson.number %>">第 <%= lesson.number %> 集</a>
+                                <p class="subheader right"><%= lesson.title %></p>
+                            </div>
+                        </li>
+                    <% end %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="course-detail" style="background: #085a78;">
+    <div class="row" style="padding-top: 20px; padding-bottom: 20px; color: white;">
+        <div class="columns">
+            <p>
+            <strong>课程名:</strong>
+            <%= @course.title %>
+            </p>
+
+            <p>
+            <strong>课程描述:</strong>
+            <%= @course.description %>
+            </p>
+        </div>
+    </div>
+</div>

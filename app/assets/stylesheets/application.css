@@ -13,3 +13,46 @@
 
  *= require_tree .
  */
+
+
+.th {
+    margin-left: 14px;
+    margin-right: 14px;
+}
+
+.th span {
+    display: block;
+}
+
+.footer {
+    background: #333333;
+    padding: 24px 0 10px;
+}
+
+.footer ul.zurb-links {
+    margin: 0;
+    display: inline-block;
+}
+
+.footer ul.zurb-links li {
+    display: block;
+    float: left;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.77778rem;
+}
+
+.footer ul.zurb-links li a {
+    color: #666666;
+    padding: 3px 6px;
+}
+
+.footer ul.zurb-links li a:hover {
+    color: #777777;
+}
+
+.footer p.copyright {
+    margin: 6px 0 0;
+    font-size: 0.66667rem;
+    color: #666666;
+}
