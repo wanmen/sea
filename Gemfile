@@ -46,3 +46,4 @@ end
 
 gem 'foundation-rails'
 gem 'mysql2'
+gem 'kaminari'

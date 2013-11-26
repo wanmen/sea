@@ -10,8 +10,8 @@ class CoursesController < ApplicationController
   # GET /courses/1
   # GET /courses/1.json
   def show
-      @lessons = @course.lessons
       l_id = params[:l] ? params[:l].to_i : 1
+      @lessons = @course.lessons.page(params[:page]).per(20)
       @video = @lessons[l_id - 1].videos.first
   end
 

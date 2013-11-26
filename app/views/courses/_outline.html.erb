@@ -1,0 +1,16 @@
+<ul class="no-bullet">
+    <% @lessons.each do |lesson| %>
+        <li>
+            <div class="clearfix">
+                <a href="?l=<%= lesson.number %>">第 <%= lesson.number %> 集</a>
+                <p class="subheader right"><%= lesson.title %></p>
+            </div>
+        </li>
+    <% end %>
+</ul>
+<%= paginate @lessons, :window => 2, :remote => true,
+    :params  => {:controller => "syllabus",
+                 :course_id => @course.id,
+                 :action => "index",
+                 :id => nil} %>
+

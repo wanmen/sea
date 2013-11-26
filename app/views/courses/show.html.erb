@@ -29,16 +29,7 @@
         </div>
         <div class="large-3 columns" style="background: white;">
             <div class="course-outline" style="padding-top: 15px;">
-                <ul class="no-bullet">
-                    <% @course.lessons.each do |lesson| %>
-                        <li>
-                            <div class="clearfix">
-                                <a href="?l=<%= lesson.number %>">第 <%= lesson.number %> 集</a>
-                                <p class="subheader right"><%= lesson.title %></p>
-                            </div>
-                        </li>
-                    <% end %>
-                </ul>
+                <%= render "outline" %>
             </div>
         </div>
     </div>
