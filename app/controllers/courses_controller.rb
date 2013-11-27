@@ -12,7 +12,7 @@ class CoursesController < ApplicationController
   def show
       l_id = params[:l] ? params[:l].to_i : 1
       @lessons = @course.lessons.page(params[:page]).per(20)
-      @video = @lessons[l_id - 1].videos.first
+      @video = @course.lessons[l_id - 1].videos.first
   end
 
   # GET /courses/new
