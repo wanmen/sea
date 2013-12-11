@@ -20,7 +20,7 @@ class LessonsController < ApplicationController
   # GET /lessons/new
   def new
     @lesson = Lesson.new
-    redirect_to action: index
+    redirect_to action: 'index'
   end
 
   # GET /lessons/1/edit
