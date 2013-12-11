@@ -23,6 +23,7 @@ class CoursesController < ApplicationController
 
   # GET /courses/1/edit
   def edit
+    redirect_to @course
   end
 
   # POST /courses

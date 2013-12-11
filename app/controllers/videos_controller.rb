@@ -19,6 +19,7 @@ class VideosController < ApplicationController
 
   # GET /videos/1/edit
   def edit
+    redirect_to @video
   end
 
   # POST /videos

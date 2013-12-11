@@ -24,6 +24,7 @@ class LessonsController < ApplicationController
 
   # GET /lessons/1/edit
   def edit
+    redirect_to @lesson
   end
 
   # POST /lessons
