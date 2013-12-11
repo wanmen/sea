@@ -15,6 +15,7 @@ class VideosController < ApplicationController
   # GET /videos/new
   def new
     @video = Video.new
+    redirect_to action: index
   end
 
   # GET /videos/1/edit
