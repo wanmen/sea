@@ -1,4 +1,5 @@
 Sea::Application.routes.draw do
+  get "about" => "about#index"
   get "syllabus/index"
   get "welcome/index"
 
