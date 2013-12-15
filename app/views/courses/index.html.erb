@@ -1,25 +1,40 @@
-<div class="row">
-    <h1>课程列表</h1>
+<div class="home-header" style="margin-top: 40px; margin-bottom: 40px;">
+    <div class="row centered-text">
+        <div class="small-9 small-push-3 columns">
+            <h3 style="color: #006887;">知识，乐趣，分享</h3>
+            <p class="subheader">与万门不期而遇</p>
+        </div>
+        <div class="small-3 small-pull-9 columns">
+            <h2 style="color: #008cba;">万门大学</h2>
+        </div>
+    </div>
 </div>
 
-<div class="row centered-text">
-    <table>
-        <thead>
-            <tr>
-                <th>课程名</th>
-                <th>描述</th>
-                <th></th>
-            </tr>
-        </thead>
+<div class="row">
+    <h3>课程列表</h3>
+</div>
 
-        <tbody>
-        <% @courses.each do |course| %>
-            <tr>
-            <td><%= course.title %></td>
-            <td><%= course.description %></td>
-            <td><%= link_to '查看', course %></td>
-            </tr>
-        <% end %>
-        </tbody>
-    </table>
+<div class="home-content">
+    <div class="row">
+        <div class="panel">
+            <table>
+                <thead>
+                    <tr>
+                        <th width="240">课程名</th>
+                        <th width="240">描述</th>
+                        <th width="240"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                <% @courses.each do |course| %>
+                    <tr>
+                    <td><%= course.title %></td>
+                    <td><%= course.description %></td>
+                    <td><%= link_to '查看', course %></td>
+                    </tr>
+                <% end %>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
